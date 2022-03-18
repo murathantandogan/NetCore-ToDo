@@ -1,0 +1,45 @@
+﻿@model ToDoItemEditVM
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">People</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th >@Model.PersonName</th>
+            <td>@Model.StartDate.ToString().Split(' ')[0]</td>
+            <td>@Model.EndDate.ToString().Split(' ')[0]</td>
+            <td>@Model.Status</td>
+        </tr>        
+        <tr>            
+            <th scope="col" colspan="4" class="text-center" >Notes</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text-center">@Model.Notes</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

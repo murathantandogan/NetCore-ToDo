@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+
+
+
+<div class="container">
+    <div class="row col-md-auto">
+
+        <div class="col-sm">
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">ToDo </div>
+            </div>
+        </div>
+
+        <div class="col-sm ">
+            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Doing</div>
+
+            </div>
+        </div>
+
+
+        <div class="col-sm">
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Done</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+
+         <partial name="_ToDoItemIndex" model="@Model" /> 
+
+         <partial name="_DoingItemIndex" model="@Model" />  
+
+         <partial name="_DoneItemIndex" model="@Model" />  
+
+        
+
+    </div>
+</div>
+
+

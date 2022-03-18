@@ -1,0 +1,25 @@
+﻿@model List<ToDoItemTotalVm>
+
+
+
+<div class="col-sm">
+    @foreach (var item in Model)
+    {
+        @if (@item.Status == StatusEnum.Doing)
+        {
+                <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header"><b>Title:</b> @item.Subject</div>
+                <div class="card-header"><h6>Start: @item.StartDate.ToString().Split(' ')[0] | End: @item.EndDate.ToString().Split(' ')[0]</h6></div>
+                
+                <div class="card-body">
+                    <h5 class="card-title">Person: @item.PersonName</h5>
+                </div>
+                <div class="card-footer align-items-center">
+                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-secondary btn-sm">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-secondary btn-sm">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger btn-sm">Delete</a>
+                </div>
+            </div>
+        }
+    }
+</div>

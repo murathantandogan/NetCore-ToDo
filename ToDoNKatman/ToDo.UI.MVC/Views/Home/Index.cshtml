@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm">
+
+            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Total People</div>
+                <div class="card-body">
+                   
+                        <h5 class="card-title">@ViewBag.UserToTal.Data.PeopleTotal</h5>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="col-sm">
+
+            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Total ToDo</div>
+                <div class="card-body">
+                    @foreach (var item in ViewBag.ToDoToTal.Data)
+                    {
+                        <h5 class="card-title">@item.ToDoTotal</h5>
+                    }
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="col-sm">
+
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Total Doing</div>
+                <div class="card-body">
+                    @foreach (var item in ViewBag.ToDoToTal.Data)
+                    {
+                        <h5 class="card-title">@item.DoingToTal</h5>
+                    }
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm">
+
+            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Total Done</div>
+                <div class="card-body">
+                    @foreach (var item in ViewBag.ToDoToTal.Data)
+                    {
+                        <h5 class="card-title">@item.DoneToTal</h5>
+                    }
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container">
+<div class="card text-center">
+  <div class="card-header">
+    Software Developer
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">ToDo N-tier Core Project</h5>
+    <p class="card-text">Bootstrap - Mssql - Core</p>
+    <a href="www.murathantandogan.com" target="_blank" class="btn btn-primary">Murathan Tandoğan</a>
+  </div>
+</div>
+</div>
